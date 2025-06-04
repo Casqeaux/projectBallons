@@ -1,0 +1,35 @@
+// Стиль для основной кнопки сайта
+.btn
+    &:link, &:visited
+        @include link-style
+        font-size: 2rem
+        text-decoration: none
+        padding: 1.5rem 4rem
+        background-color: $color-white
+        border-radius: 5rem
+        transition: all .3s
+        position: relative
+    &:hover
+        transform: translateY(-.4rem)
+        box-shadow: $box-shadow
+        &::after
+            opacity: 0
+            transform: scaleX(1.5) scaleY(1.7)
+    &:active
+        transform: translateY(-.2rem)
+        box-shadow: $box-shadow
+    &::after
+        position: absolute
+        content: ""
+        background-color: $color-white
+        width: 100%
+        height: 100%
+        border-radius: 5rem
+        display: inline-block
+        top: 0
+        left: 0
+        z-index: -1
+        transition: all .4s
+    &_animated
+        animation: bottomToUp .5s ease-out 0.7s
+        animation-fill-mode: backwards

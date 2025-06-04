@@ -1,0 +1,13 @@
+// Миксин для стиля кнопок
+@mixin link-style
+    text-transform: uppercase
+    text-decoration: none
+    color: $color-gray
+    display: inline-block
+
+// Миксин CleaFIX
+@mixin clearfix
+    &::after
+        content: ""
+        display: table
+        clear: both

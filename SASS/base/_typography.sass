@@ -1,0 +1,61 @@
+// Настройки заголовков
+.title-first
+    color: $color-white
+    &__main
+        display: block
+        font-weight: 800
+        font-size: 5rem
+        letter-spacing: 1rem
+        text-transform: uppercase
+        margin: 0 0 1rem 0
+        animation-name: leftToRight
+        animation-duration: 1.7s
+        animation-delay: 1s //Задержка в 2 секунды на прогруз сайта
+        backface-visibility: hidden
+        animation-timing-function: ease
+    &__second
+        display: block
+        font-weight: 100
+        font-size: 4rem
+        letter-spacing: 0.5rem
+        animation-name: rightToLeft
+        animation-duration: 1.7s
+        animation-delay: 1s //Задержка в 2 секунды на прогруз сайта
+        animation-timing-function: ease
+        backface-visibility: hidden
+        margin: 0 0 6.5rem 0
+
+// Стиль шрифта для сайта, базовый
+body
+    font-family: "Roboto", sans-serif
+    font-size: $font-size-paragraph
+    font-weight: 400
+    color: $color-gray
+    letter-spacing: .2rem
+
+// Стиль второго заголовка
+.title-secondary
+    font-size: $font-size-paragraph-h2
+    letter-spacing: 1rem
+    text-transform: uppercase
+    font-weight: 800
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0%, rgba($color-brown-dark, 0.7) 100%)
+    -webkit-background-clip: text //Свойство градиента на текст
+    color: transparent
+    &:hover
+        transition: all .4s
+        backface-visibility: hidden //Свойство для убирания глюков
+        transform: skewY(2deg) skewX(15deg) scale(1.1)
+        text-shadow: $shadow-h2
+// Стиль третьего заголовка
+.title-third
+    font-size: $font-size-paragraph-h3
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 700
+// Стиль текста About
+ .paragraph
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem
+    line-height: 140%
+    font-weight: 400
