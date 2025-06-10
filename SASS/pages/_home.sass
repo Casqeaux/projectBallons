@@ -1,3 +1,10 @@
-.section-about 
+.section-about
     padding: 8rem 0 0 0
-    
+
+.section-adventure
+    padding: 21rem 0
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0%, rgba($color-black, 0.7) 100%), url(../img/adventure_bgc.jpg) center / cover no-repeat
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 80%)
+    // transform: skewY(7deg)
+    &> * // Применение ко всем дочерним элементам
+        // transform: skewY(-7deg)

@@ -180,12 +180,13 @@ body {
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
   font-weight: 700;
-  color: #777777;
+  color: #BA8554;
   text-decoration: none;
   padding: 1rem;
   border-bottom: 0.1rem #BA8554 solid;
   display: inline-block;
-  transition: 0.5 all;
+  transition: 0.5s all;
+  margin: 0 0 10.4rem 0;
 }
 .btn-text:hover {
   background-color: #BA8554;
@@ -195,6 +196,61 @@ body {
 }
 .btn-text:active {
   transform: translateY(0rem);
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 55%;
+  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  position: absolute;
+  z-index: 10;
+  transition: 0.2s all;
+  outline-offset: 1rem;
+}
+.composition__photo_n1 {
+  top: 0rem;
+  left: 2rem;
+}
+.composition__photo_n2 {
+  top: 2rem;
+  right: 0rem;
+}
+.composition__photo_n3 {
+  top: 13rem;
+  left: 10rem;
+}
+.composition__photo:hover {
+  outline: 1rem solid #BA8554;
+  transform: scale(1.1);
+  z-index: 20;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
+}
+
+.adventure-card {
+  min-width: 25rem;
+  padding: 2.5rem 2.5rem 2.9rem 2.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: 0.2s all;
+}
+.adventure-card:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+  transition: 0.2s all;
+  cursor: pointer;
+}
+.adventure-card__icon {
+  display: inline-block;
+  font-size: 6rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(161, 79, 3, 0.7) 99.94%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .header {
@@ -266,4 +322,11 @@ body {
 
 .section-about {
   padding: 8rem 0 0 0;
+}
+
+.section-adventure {
+  padding: 21rem 0;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(../img/adventure_bgc.jpg) center/cover no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 80%);
 }
