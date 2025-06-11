@@ -253,6 +253,36 @@ body {
   color: transparent;
 }
 
+.card-tour {
+  height: 50rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+.card-tour__side {
+  height: 50rem;
+  transition: 0.7s all ease-out;
+  color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.card-tour__side_front {
+  background: yellow;
+}
+.card-tour__side_back {
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  transform: rotateY(180deg);
+}
+.card-tour:hover .card-tour__side_front {
+  transform: rotateY(180deg);
+}
+.card-tour:hover .card-tour__side_back {
+  transform: rotateY(0deg);
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -329,4 +359,7 @@ body {
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(../img/adventure_bgc.jpg) center/cover no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 80%);
           clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 80%);
+}
+.section-tour {
+  padding: 8rem 0 0 0;
 }
